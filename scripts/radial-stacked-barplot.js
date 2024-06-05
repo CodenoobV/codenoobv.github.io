@@ -93,8 +93,8 @@ function radialStackedBarplot(dataset, keysDomain) {
                                 .attr("id", "tooltipBox")
                                 .attr("x", xPosInRadial + outerRadius + 10)
                                 .attr("y", yPosInRadial + outerRadius + 10)
-                                .attr("width", "105px")
-                                .attr("height", "12px")
+                                .attr("width", "200px")
+                                .attr("height", "40px")
                                 .attr("fill", "white")
                                 .attr("opacity", 0.8);
 
@@ -103,7 +103,7 @@ function radialStackedBarplot(dataset, keysDomain) {
                                     .attr("x", xPosInRadial + outerRadius + 15)
                                     .attr("y", yPosInRadial + outerRadius + 20)
                                     .text("Number of Physicians: " + (d[1] - d[0]))
-                                    .attr("font-size", "8px")
+                                    .attr("font-size", "20px")
                                     .attr("font-family", "Gill Sans, Lucida Sans, sans-serif");
             })
             .on("mouseout", function() {
