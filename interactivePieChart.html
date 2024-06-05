@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Disparity of Physicians in Australia</title>
+
+    <!-- refer to D3 library v7 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- refer to D3-simpler-slider plug-in (NO LONGER IN USE) -->
+    <!-- <script src="https://unpkg.com/d3-simple-slider"></script> -->
+
+    <!-- refer to style file -->
+    <link rel="stylesheet" href="./styles/style_all.css">
+    <link rel="stylesheet" href="styles/style_pie_combo.css">
+
+    <!-- refer to visualisation code files -->
+    <script src="scripts/interactive-pie-chart.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./interactivePieChart.html">Changes of Australian Physicians by Gender</a></li>
+                    <li><a href="./radialStackedBarplot.html">Global Comparison of Physicians' Distribution</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <h1>Gender Disparity in Physician Workforce of Australia 2012 - 2021</h1>
+        <div>
+            <h2>About the Visualisation</h2>
+            <div>
+                <p>
+                    This visualisation provides user with detailed comparison between male and female physicians in Australia from 2012 to 2021.
+                    Data for total male and female, as well as data for each age group of a gender, is used for this visualisation.
+                    <br>
+                    <br>
+                    The pie chart can be hovered over to see the head counts of each gender.
+                    A slider is also provided to show data from 2012 to 2021.
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <h2>Visualisation</h2>
+            <!-- Slider -->
+            <input type = "range" name = "year" id = "slider_year"
+                    min = "2012" max = "2021" value = "2021" step = "1"
+                    list = "markers">
+            <datalist id = "markers">
+                <option value = "2012" label = "2012"></option>
+                <option value = "2013" label = "2013"></option>
+                <option value = "2014" label = "2014"></option>
+                <option value = "2015" label = "2015"></option>
+                <option value = "2016" label = "2016"></option>
+                <option value = "2017" label = "2017"></option>
+                <option value = "2018" label = "2018"></option>
+                <option value = "2019" label = "2019"></option>
+                <option value = "2020" label = "2020"></option>
+                <option value = "2021" label = "2021"></option>
+            </datalist>
+            <div id = "visualisation"></div>
+            <div id="tooltip" style="position: absolute; 
+                                    text-align: center; 
+                                    width: 75px; 
+                                    height: 14px; 
+                                    padding: 2px; 
+                                    font: 12px sans-serif; 
+                                    background: white; 
+                                    border: 0px; 
+                                    border-radius: 2px; 
+                                    pointer-events: none; 
+                                    opacity: 0;">
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <div>
+            <p>
+                COS30045 - Data Visualisation
+                <br>
+                A Closer Look at Physicians Workforce of Australia and Other Countries.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

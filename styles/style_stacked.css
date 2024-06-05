@@ -1,0 +1,51 @@
+button {
+    background-color: #2a4d66; /* Green */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+    font-family: "Gill Sans", "Lucida Sans", sans-serif;
+}
+
+button:hover {
+    background-color: white;
+    color: #2a4d66;
+    border: 2px solid #2a4d66;
+}
+
+#container {
+    display: flex;
+    margin: auto;
+}
+#visualisation {
+    width: 100vw;
+    height: 100vh;
+    /* border: solid 1px red; */
+    overflow: auto;
+}
+
+#svg_radial_bar_plot {
+    /* border: solid 3px green; */
+    display: block;
+    /* display: block; */
+    margin: auto;
+    /* width: 70%; */
+    height: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    /* margin-right: 20px; */
+    border-collapse: collapse;
+    font-family: 'Gill Sans', 'Lucida Sans', sans-serif;
+    font-size: 12px;
+    width: 25%;
+    /* height: 100%; */
+}

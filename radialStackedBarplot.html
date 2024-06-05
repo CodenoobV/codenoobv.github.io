@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physicians of OECD Members and Partners in 2021</title>
+
+    <!-- refer to D3 library v7 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- refer to D3-simpler-slider plug-in (NO LONGER IN USE) -->
+    <!-- <script src="https://unpkg.com/d3-simple-slider"></script> -->
+
+    <!-- refer to style file -->
+    <link rel="stylesheet" href="./styles/style_all.css">
+    <link rel="stylesheet" href="./styles/style_stacked.css">
+
+    <!-- refer to visualisation code files -->
+    <script src="./scripts/radial-stacked-barplot.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./interactivePieChart.html">Changes of Australian Physicians by Gender</a></li>
+                    <li><a href="./radialStackedBarplot.html">Global Comparison of Physicians' Distribution</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <h1>Population of Physicians of OECD Members and Partners by Age Groups in 2021</h1>
+        <div>
+            <h2>About the Visualisation</h2>
+            <div>
+                <p>
+                    This visualisation aims to compare number of physicians divided into age groups among OECD member and partner countries in 2021. 
+                    Total, female, and male physicians are used for this comparison.
+                    <br>
+                    <br>
+                    The chart provided buttons to choose among radial stacked charts for number of Total (both female and male physicians), Female, and Male specific physicians.
+                    To view a chart, click on the preffered button option and the respective visualisation would be displayed. 
+                    While reading the chart, web users could mouse-over on a bar to show its specific data of number of physicians on the hovered country and age group.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2>Visualisation</h2>
+                
+            <button id="total">Total physicians</button>
+            <button id="female">Female physicians</button>
+            <button id="male">Male physicians</button>
+            <div id="container">
+                <table id="countryTable">
+                    <tr>
+                        <th>Code</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr><td>AUS</td><td>Australia</td></tr>
+                    <tr><td>AUT</td><td>Austria</td></tr>
+                    <tr><td>BEL</td><td>Belgium</td></tr>
+                    <tr><td>CAN</td><td>Canada</td></tr>
+                    <tr><td>CZE</td><td>Czechia</td></tr>
+                    <tr><td>FRA</td><td>France</td></tr>
+                    <tr><td>DEU</td><td>Germany</td></tr>
+                    <tr><td>GRC</td><td>Greece</td></tr>
+                    <tr><td>HUN</td><td>Hungary</td></tr>
+                    <tr><td>ISL</td><td>Iceland</td></tr>
+                    <tr><td>IRL</td><td>Ireland</td></tr>
+                    <tr><td>ITA</td><td>Italy</td></tr>
+                    <tr><td>KOR</td><td>Korea</td></tr>
+                    <tr><td>NLD</td><td>Netherlands</td></tr>
+                    <tr><td>NZL</td><td>New Zealand</td></tr>
+                    <tr><td>NOR</td><td>Norway</td></tr>
+                    <tr><td>POL</td><td>Poland</td></tr>
+                    <tr><td>SVK</td><td>Slovak Republic</td></tr>
+                    <tr><td>ESP</td><td>Spain</td></tr>
+                    <tr><td>CHE</td><td>Switzerland</td></tr>
+                    <tr><td>TUR</td><td>Türkiye</td></tr>
+                    <tr><td>GBR</td><td>United Kingdom</td></tr>
+                    <tr><td>USA</td><td>United States</td></tr>
+                    <tr><td>CHL</td><td>Chile</td></tr>
+                    <tr><td>EST</td><td>Estonia</td></tr>
+                    <tr><td>ISR</td><td>Israel</td></tr>
+                    <tr><td>SVN</td><td>Slovenia</td></tr>
+                    <tr><td>LVA</td><td>Latvia</td></tr>
+                    <tr><td>LTU</td><td>Lithuania</td></tr>
+                    <tr><td>COL</td><td>Colombia</td></tr>
+                    <tr><td>BGR</td><td>Bulgaria</td></tr>
+                    <tr><td>ROU</td><td>Romania</td></tr>
+                    <tr><td>HRV</td><td>Croatia</td></tr>
+                </table>
+                <div id="visualisation"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <p>
+                COS30045 Data Visualisation
+                <br>
+                A Dive into Gender Equality of Physicians in Australia and Other Countries.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
