@@ -268,5 +268,7 @@ d3.csv("./data/HEALTH_REAC_04052024140125591.csv", function(d) {
             console.log(processedDataMale);
             radialStackedBarplot(processedDataMale, stacksKeyMale);
         });
+
+    document.getElementById("total").click();
 });
 
